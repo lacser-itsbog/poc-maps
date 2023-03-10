@@ -9,6 +9,7 @@ The aim of this POC is to evaluate the libraries against the following requimren
 - Cost: TBD
 - Usability: TBD
 - Performance: TBD
+- Support for different formats: TBD (like KML, GeoJSON, OSM, ...)
 
 ## Options
 

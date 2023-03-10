@@ -3,7 +3,7 @@
  * Copyright 2019 Google LLC. All Rights Reserved.
  * SPDX-License-Identifier: Apache-2.0
  */
-let map, heatmap;
+let map, heatmap, kmlmap;
 
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
@@ -15,6 +15,11 @@ function initMap() {
     data: getPoints(),
     map: map,
     radius: 50,
+  });
+  kmlmap = new google.maps.KmlLayer('data/kml/2012_Earthquakes_Mag5.kml', {
+    suppressInfoWindows: true,
+    preserveViewport: false,
+    map: map
   });
   document
     .getElementById('toggle-heatmap')
