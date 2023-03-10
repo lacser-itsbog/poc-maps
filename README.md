@@ -10,3 +10,15 @@ The aim of this POC is to evaluate the libraries against the following requimren
 - Usability: TBD
 - Performance: TBD
 
+## Options
+
+- OpenLayers
+- Google Maps API
+- Leaflet
+- Mapbox
+- Datamaps
+- Bing Maps
+- Open Street Map
+- MapQuest
+- Polymaps
+- ArcGIS
