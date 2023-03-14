@@ -1,6 +1,8 @@
 # Test: Google Maps
 
-Try in [JSFiddle](https://jsfiddle.net/gh/get/library/pure/wjfatuan/poc-maps/tree/main/plain_js/test_gmaps)
+Try it in [JSFiddle](https://jsfiddle.net/gh/get/library/pure/wjfatuan/poc-maps/tree/main/plain_js/test_gmaps)
+
+## Usage details
 
 This example requires the Visualization library. Include the libraries=visualization parameter when you first load the API. For example:
 

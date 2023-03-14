@@ -1,20 +1,22 @@
 # Maps POC
 
-This repository contains different tests ran to evaluate the feasibility of using map libraries to visualise the results of the ITS project. Details of each test can be found on their respective folder.
+This repository contains a set of tests and results used to evaluate different map visualisation libraries. The aim is to compare them to implement the visualisation of the results of the IT project. You can find the results of each test in their respective folder.
 
 ## Purpose
 
-The aim of this POC is to evaluate the libraries against the following requimrents:
+We are comparing different libraries against the following requirements:
 
-- Cost: TBD
-- Usability: TBD
-- Performance: TBD
-- Support for different formats: TBD (like KML, GeoJSON, OSM, ...)
+- License and cost: We'd prefer a library that minimises the license costs, and has fewer usage restrictions.
+- Usability: We need to display heat maps of data over a map of Bogotá. Given the nature of the data we need the library to support street data for Bogotá.
+- Performance: We don't know yet the amount of data that will be use dto display information in the map, so we need a library that support showing data at different scales, and ideally in a progressive fashion.
+- Support for different formats: We will decide later what format will be used to export the geo-spatial data, but it's idean that the library supports different formats (i.e. KML, GeoJSON, OSM, ...)
 
-## Options
+## Options and results
 
-- OpenLayers
+TODO
+
 - Google Maps API
+- OpenLayers
 - Leaflet
 - Mapbox
 - Datamaps
