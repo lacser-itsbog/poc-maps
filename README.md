@@ -13,15 +13,6 @@ We are comparing different libraries against the following requirements:
 
 ## Options and results
 
-TODO
-
-- Google Maps API
-- OpenLayers
-- Leaflet
-- Mapbox
-- Datamaps
-- Bing Maps
-- Open Street Map
-- MapQuest
-- Polymaps
-- ArcGIS
+- [Google Maps API](plain_js/test_gmaps/)
+- [OpenLayers](nodejs/test_openlayers/)
+- [Bing Maps](bingmaps/)
