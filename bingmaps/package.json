@@ -1,0 +1,18 @@
+{
+    "name": "test-bingmaps-application",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "dev-start": "nodemon index.json"
+    },
+    "keywords": [],
+    "author": "Wilson Javier Forero",
+    "dependencies": {
+        "express": "^4.18.2"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.21"
+    }
+}
