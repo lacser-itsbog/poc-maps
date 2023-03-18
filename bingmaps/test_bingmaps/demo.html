@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Basic Heat Map - Bing Maps Samples</title>
+
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description"
+        content="The following example loads 1,000 random locations into a heat map that are within the initial view of a loaded map." />
+    <meta name="keywords" content="Microsoft maps, map, gis, API, SDK, Bing, Bing Maps" />
+    <meta name="author" content="Microsoft Bing Maps" />
+    <meta name="screenshot" content="screenshot.jpg" />
+
+    <script>
+        function GetMap() {
+            
+            //Use sample data for Bogotá
+            var myGeoJson = 
+            {
+    "type": "FeatureCollection",
+    "metadata": {
+        "generated": 1679082137000,
+        "title": "USGS All Earthquakes, Past Month",
+        "status": 200,
+        "api": "1.10.3",
+        "count": 40
+    },
+    "features": [
+        {"type":"Feature","properties":{"probability":4.98318489471254},"geometry":{ "type":"Point","coordinates":[4.6482975,-74.107807] } } ,
+        {"type":"Feature","properties":{"probability":3.67490139567064},"geometry":{ "type":"Point","coordinates":[4.6502975,-74.107807] } } ,
+        {"type":"Feature","properties":{"probability":2.50921823623755},"geometry":{ "type":"Point","coordinates":[4.6522975,-74.107807] } } ,
+        {"type":"Feature","properties":{"probability":5.74033704980028},"geometry":{ "type":"Point","coordinates":[4.6542975,-74.107807] } } ,
+        {"type":"Feature","properties":{"probability":4.56008462677122},"geometry":{ "type":"Point","coordinates":[4.6562975,-74.107807] } } ,
+        {"type":"Feature","properties":{"probability":1.01383090541524},"geometry":{ "type":"Point","coordinates":[4.6582975,-74.107807] } } ,
+        {"type":"Feature","properties":{"probability":2.99113208959826},"geometry":{ "type":"Point","coordinates":[4.6602975,-74.107807] } } ,
+        {"type":"Feature","properties":{"probability":1.06659586837783},"geometry":{ "type":"Point","coordinates":[4.6622975,-74.107807] } } ,
+        {"type":"Feature","properties":{"probability":3.70577198996786},"geometry":{ "type":"Point","coordinates":[4.6642975,-74.107807] } } ,
+        {"type":"Feature","properties":{"probability":4.33517244418712},"geometry":{ "type":"Point","coordinates":[4.6662975,-74.107807] } } ,
+        {"type":"Feature","properties":{"probability":2.39925484519435},"geometry":{ "type":"Point","coordinates":[4.6682975,-74.107807] } } ,
+        {"type":"Feature","properties":{"probability":1},"geometry":{ "type":"Point","coordinates":[-74.107807,4.6702975] } } ,
+        {"type":"Feature","properties":{"probability":4},"geometry":{ "type":"Point","coordinates":[-74.107807,4.6722975] } } ,
+        {"type":"Feature","properties":{"probability":2},"geometry":{ "type":"Point","coordinates":[-74.107807,4.6742975] } } ,
+        {"type":"Feature","properties":{"probability":5},"geometry":{ "type":"Point","coordinates":[-74.107807,4.6762975] } } ,
+        {"type":"Feature","properties":{"probability":5},"geometry":{ "type":"Point","coordinates":[-74.107807,4.6782975] } } ,
+        {"type":"Feature","properties":{"probability":5},"geometry":{ "type":"Point","coordinates":[-74.107807,4.6802975] } } ,
+        {"type":"Feature","properties":{"probability":2},"geometry":{ "type":"Point","coordinates":[-74.107807,4.6822975] } } ,
+        {"type":"Feature","properties":{"probability":5},"geometry":{ "type":"Point","coordinates":[-74.107807,4.6842975] } } ,
+        {"type":"Feature","properties":{"probability":5},"geometry":{ "type":"Point","coordinates":[-74.107807,4.6862975] } } ,
+        {"type":"Feature","properties":{"probability":2},"geometry":{ "type":"Point","coordinates":[-74.109807,4.6482975] } } ,
+        {"type":"Feature","properties":{"probability":4},"geometry":{ "type":"Point","coordinates":[-74.109807,4.6502975] } } ,
+        {"type":"Feature","properties":{"probability":5},"geometry":{ "type":"Point","coordinates":[-74.109807,4.6522975] } } ,
+        {"type":"Feature","properties":{"probability":5},"geometry":{ "type":"Point","coordinates":[-74.109807,4.6542975] } } ,
+        {"type":"Feature","properties":{"probability":4},"geometry":{ "type":"Point","coordinates":[-74.109807,4.6562975] } } ,
+        {"type":"Feature","properties":{"probability":2},"geometry":{ "type":"Point","coordinates":[-74.109807,4.6582975] } } ,
+        {"type":"Feature","properties":{"probability":3},"geometry":{ "type":"Point","coordinates":[-74.109807,4.6602975] } } ,
+        {"type":"Feature","properties":{"probability":5},"geometry":{ "type":"Point","coordinates":[-74.109807,4.6622975] } } ,
+        {"type":"Feature","properties":{"probability":5},"geometry":{ "type":"Point","coordinates":[-74.109807,4.6642975] } } ,
+        {"type":"Feature","properties":{"probability":3},"geometry":{ "type":"Point","coordinates":[-74.109807,4.6662975] } } ,
+        {"type":"Feature","properties":{"probability":5},"geometry":{ "type":"Point","coordinates":[-74.109807,4.6682975] } } ,
+        {"type":"Feature","properties":{"probability":1},"geometry":{ "type":"Point","coordinates":[-74.109807,4.6702975] } } ,
+        {"type":"Feature","properties":{"probability":4},"geometry":{ "type":"Point","coordinates":[-74.109807,4.6722975] } } ,
+        {"type":"Feature","properties":{"probability":1},"geometry":{ "type":"Point","coordinates":[-74.109807,4.6742975] } } ,
+        {"type":"Feature","properties":{"probability":2},"geometry":{ "type":"Point","coordinates":[-74.109807,4.6762975] } } ,
+        {"type":"Feature","properties":{"probability":4},"geometry":{ "type":"Point","coordinates":[-74.109807,4.6782975] } } ,
+        {"type":"Feature","properties":{"probability":5},"geometry":{ "type":"Point","coordinates":[-74.109807,4.6802975] } } ,
+        {"type":"Feature","properties":{"probability":1},"geometry":{ "type":"Point","coordinates":[-74.109807,4.6822975] } } ,
+        {"type":"Feature","properties":{"probability":2},"geometry":{ "type":"Point","coordinates":[-74.109807,4.6842975] } } ,
+        {"type":"Feature","properties":{"probability":5},"geometry":{ "type":"Point","coordinates":[-74.109807,4.6862975] } } 
+    ]
+};
+            var map = new Microsoft.Maps.Map('#myMap', {
+                mapTypeId: Microsoft.Maps.MapTypeId.road,
+                center: new Microsoft.Maps.Location(4.6482975, -74.107807),
+                zoom: 4
+            });
+
+            //Generate a 1,000 random locations that are within the bounds of the map view.
+            var locs = Microsoft.Maps.TestDataGenerator.getLocations(1000, map.getBounds());
+            
+            //Load the HeatMap module.
+            Microsoft.Maps.loadModule(['Microsoft.Maps.GeoJson', 'Microsoft.Maps.HeatMap'], function () {
+                var shapes = Microsoft.Maps.GeoJson.read(myGeoJson);
+                var heatmap = new Microsoft.Maps.HeatMapLayer(shapes, { 
+                    radius: 5,
+                    propertyAsWeight: 'probability'
+                });
+                map.layers.insert(heatmap);
+            });
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="myMap" style="position:relative;width:100%;min-width:290px;height:600px;background-color:gray"></div>
+
+    <script>
+        // Dynamic load the Bing Maps Key and Script
+        // Get your own Bing Maps key at https://www.microsoft.com/maps
+        (async () => {
+            let script = document.createElement("script");
+            let bingKey = "AgHeVr0aahM8TPk5OXtyMae6SmWv1ug4fkgjXuDl7iDdCRhDGdGWccImJGYps-AA";
+            script.setAttribute("src", `https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=${bingKey}`);
+            document.body.appendChild(script);
+        })();
+    </script>
+</body>
+
+</html>

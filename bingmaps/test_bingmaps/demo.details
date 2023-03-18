@@ -1,0 +1,7 @@
+name: Bing Maps API Demo
+authors:
+  - Wilson Javier Forero
+tags:
+  - bing-maps
+load_type: h
+description: Sample code for Bing Maps API (based on Microsoft examples)
