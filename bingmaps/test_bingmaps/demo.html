@@ -81,13 +81,12 @@
             
             //Load the HeatMap module.
             Microsoft.Maps.loadModule(['Microsoft.Maps.GeoJson', 'Microsoft.Maps.HeatMap'], function () {
-                Microsoft.Maps.GeoJson.read(myGeoJson, function (shapes) {
-                    var heatmap = new Microsoft.Maps.HeatMapLayer(shapes, { 
-                        radius: 5,
-                        propertyAsWeight: 'probability'
-                    });
-                    map.layers.insert(heatmap);
+                var shapes = Microsoft.Maps.GeoJson.read(myGeoJson);
+                var heatmap = new Microsoft.Maps.HeatMapLayer(shapes, { 
+                    radius: 5,
+                    propertyAsWeight: 'probability'
                 });
+                map.layers.insert(heatmap);
             });
         }
     </script>
@@ -102,7 +101,7 @@
         // Get your own Bing Maps key at https://www.microsoft.com/maps
         (async () => {
             let script = document.createElement("script");
-            let bingKey = "";
+            let bingKey = "AgHeVr0aahM8TPk5OXtyMae6SmWv1ug4fkgjXuDl7iDdCRhDGdGWccImJGYps-AA";
             script.setAttribute("src", `https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=${bingKey}`);
             document.body.appendChild(script);
         })();
