@@ -4,7 +4,7 @@ To use the Bing Maps API you need to [create a new developer account](https://ww
 
 ## Usage
 
-Try it in [JSFiddle](https://jsfiddle.net/gh/get/library/pure/wjfatuan/poc-maps/tree/main/bingmaps/test_bingmaps)
+Try it in [JSFiddle](https://jsfiddle.net/gh/get/library/pure/wjfatuan/poc-maps/tree/main/bingmaps/test_bingmaps) [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/lacser-itsbog/poc-maps/tree/bingmaps/bingmaps)
 
 ## License
 
