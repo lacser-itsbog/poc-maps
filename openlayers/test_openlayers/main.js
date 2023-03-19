@@ -1,29 +1,27 @@
-import KML from 'ol/format/KML.js';
+import GeoJSON from 'ol/format/GeoJSON.js';
 import Map from 'ol/Map.js';
 import Stamen from 'ol/source/Stamen.js';
 import VectorSource from 'ol/source/Vector.js';
 import View from 'ol/View.js';
 import {Heatmap as HeatmapLayer, Tile as TileLayer} from 'ol/layer.js';
+import {useGeographic} from 'ol/proj';
 
 const blur = document.getElementById('blur');
 const radius = document.getElementById('radius');
 
+useGeographic();
+
 const vector = new HeatmapLayer({
   source: new VectorSource({
-    url: 'data/kml/2012_Earthquakes_Mag5.kml',
-    format: new KML({
-      extractStyles: false,
-    }),
+    format: new GeoJSON(),
+    url: 'https://raw.githubusercontent.com/lacser-itsbog/poc-maps/master/data/random-sample.geojson',
+    
   }),
   blur: parseInt(blur.value, 10),
   radius: parseInt(radius.value, 10),
   weight: function (feature) {
-    // 2012_Earthquakes_Mag5.kml stores the magnitude of each earthquake in a
-    // standards-violating <magnitude> tag in each Placemark.  We extract it from
-    // the Placemark's name instead.
-    const name = feature.get('name');
-    const magnitude = parseFloat(name.substr(2));
-    return magnitude - 5;
+    const probability = parseFloat(feature.get('probability'));
+    return probability;
   },
 });
 
@@ -33,14 +31,18 @@ const raster = new TileLayer({
   }),
 });
 
-new Map({
+const view = new View({
+    center: [0,0],
+    zoom: 12,
+  });
+
+let map = new Map({
   layers: [raster, vector],
   target: 'map',
-  view: new View({
-    center: [0, 0],
-    zoom: 2,
-  }),
+  view: view,
 });
+const size = map.getSize();
+view.centerOn([-74.247892,4.6486259], size, [size[0]/4, size[1]/2]);
 
 blur.addEventListener('input', function () {
   vector.setBlur(parseInt(blur.value, 10));
