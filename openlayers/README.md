@@ -1,6 +1,6 @@
 # Test: OpenLayers
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/lacser-itsbog/poc-maps/tree/openlayers/openlayers/test_openlayers)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/lacser-itsbog/poc-maps/tree/master/openlayers/test_openlayers)
 
 This test is based in OpenLayers and Vite.
 
