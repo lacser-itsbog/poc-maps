@@ -14,5 +14,5 @@ We are comparing different libraries against the following requirements:
 ## Options and results
 
 - [Google Maps API](googlemaps/)
-- [OpenLayers](nodejs/test_openlayers/)
+- [OpenLayers](openlayers/)
 - [Bing Maps](bingmaps/)
