@@ -13,6 +13,6 @@ We are comparing different libraries against the following requirements:
 
 ## Options and results
 
-- [Google Maps API](plain_js/test_gmaps/)
+- [Google Maps API](googlemaps/)
 - [OpenLayers](nodejs/test_openlayers/)
 - [Bing Maps](bingmaps/)
