@@ -15,7 +15,11 @@ You can find some samples on the [Bing Maps Samples page](https://samples.bingma
 
 ### License and cost
 
-Bing Maps API provides different [licensing options](https://www.microsoft.com/en-us/maps/licensing/licensing-options/). You can use a developer license (free) or an enterprise license. TODO: Find costs
+Bing Maps API provides different [licensing options](https://www.microsoft.com/en-us/maps/licensing/licensing-options/). You can use a developer license (free) or an enterprise license.
+
+- [Basic Key](https://www.microsoft.com/en-us/maps/licensing#developerLicense): Free with fewer than 125.000 transactions per calendar year on websites and mobile apps that are not on/for the Windows Phone.
+
+- [Enterprise License](https://www.microsoft.com/en-us/maps/licensing#EnterpriseLicense): available without restriction. Pricing details are not public.
 
 ### Usability
 
