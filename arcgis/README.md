@@ -1,8 +1,10 @@
 # Test: ArcGIS
 
+Try it in [JSFiddle](https://jsfiddle.net/gh/get/library/pure/lacser-itsbog/poc-maps/tree/main/arcgis/test_arcgis)
+
 ## Usage
 
-TODO
+First you'll need to create a new ArcGIS account and upgrade it to an ArcGIS Developer account. Then, you can create a new API key to start using the APIS.
 
 ## Evaluation
 
@@ -25,3 +27,4 @@ TODO
 ## References
 
 - [ArcGIS Developers Portal](https://developers.arcgis.com/)
+- [ArcGIS HeatMaps](https://developers.arcgis.com/javascript/latest/visualization/high-density-data/heatmap/)
