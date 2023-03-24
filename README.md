@@ -16,3 +16,4 @@ We are comparing different libraries against the following requirements:
 - [Google Maps API](googlemaps/)
 - [OpenLayers](openlayers/)
 - [Bing Maps](bingmaps/)
+- [ArcGIS](arcgis/)
