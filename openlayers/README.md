@@ -32,11 +32,11 @@ and then open the address <http://localhost:5173> in your browser.
 
 ### License and cost
 
-You can use Google Maps Platform with no charge for up to 28.500 map loads. After that you start to pay different rates depending on the API you use. More information here.
+It is completely free, Open Source JavaScript, released under the 2-clause BSD License (also known as the FreeBSD). It can combine maps from different sources (for instance Google Maps, Yahoo Maps, ...). WIth OpenLayers you can create web applications to visualise a dynamic map.
 
 ### Usability
 
-Google Maps has complete coverage for Colombia and provides two different views: Map and Satellite. The documentation is good and is available here.
+This is an open source project with good documentation and examples available in its website. Compared to other tools seems to have a limited availability of examples for some use cases.
 
 ### Performance
 
@@ -44,7 +44,7 @@ We don't know yet the amount of data to show on the map, so we need a library th
 
 ### Support for different formats
 
-Google Maps support GeoJSON (using the Data layer), KML and GeoRSS formats. It's recommended to use the Data layer and GeoJSON.
+OpenLayers supports GeoJSON, GML, GPX, KML, OSMXML, TopoJSON, EsriJSON, among others.
 
 ## References
 
